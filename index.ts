@@ -28,12 +28,12 @@ async function main() {
   const filteredPosts = await prisma.post.findMany({
     where: {
       OR: [
-        { title: { contains: 'hello' } },
-        { content: { contains: 'hello' } }
-
-    }
+        { title: { contains: "Hello" } },
+        { content: { contains: "Hello" } },
+      ],
+    },
   })
-  console.dir(feredPosts, { depth: null })
+  console.log(filteredPosts,)
 */
 /*
   const post = await prisma.post.create({
@@ -69,7 +69,7 @@ async function main() {
       profile: true
     }
   })
-  console.dir(allUsers, { depth: null })
+  // console.dir(allUsers, { depth: null })
 
 }
 
